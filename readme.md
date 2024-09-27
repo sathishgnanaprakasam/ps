@@ -50,9 +50,9 @@ Add the number by 2 until the number becomes N or exceeds N
 
 Questions:
 
-[ ] Prime Number
-[ ] writing one solutions instead of using built-in methods
-[ ] time complexities - code optimization
-[ ] leet code examples
-[ ] pattern programming
-[ ] test cases - positive, negative, boundary, edge
+- [ ] Prime Number
+- [ ] writing one solutions instead of using built-in methods
+- [ ] time complexities - code optimization
+- [ ] leet code examples
+- [ ] pattern programming
+- [ ] test cases - positive, negative, boundary, edge
