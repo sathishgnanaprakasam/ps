@@ -32,16 +32,32 @@ function findNumberOfFactors(N) {
     return numberOfFactors;
 }
 
-// Get the input number N
-let N = 1;
+// import readline library
+const readline = require('readline');
 
-// Find the number of factors of the number - subroutine <- numberOfFactors
-let numberOfFactors = findNumberOfFactors(N);
+// create an interface
+const rl = readline.createInterface({
+    input: process.stdin
+});
 
-// If the number of factors is 2, then print "Prime"
-if (numberOfFactors === 2) {
-    console.log('Prime');
-} else {
-    // Else if the number of factors is greater than 2, then print "Not Prime"
-    console.log('Not Prime');
-}
+const userInput = [];
+
+rl.on('line', (input) => {
+    userInput.push(input);
+});
+
+rl.on('close', () => {
+    // Get the input number N
+    let N = Number(userInput[0]);
+
+    // Find the number of factors of the number - subroutine <- numberOfFactors
+    let numberOfFactors = findNumberOfFactors(N);
+
+    // If the number of factors is 2, then print "Prime"
+    if (numberOfFactors === 2) {
+        console.log('Prime');
+    } else {
+        // Else if the number of factors is greater than 2, then print "Not Prime"
+        console.log('Not Prime');
+    }
+});

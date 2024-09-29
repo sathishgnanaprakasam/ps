@@ -1,3 +1,5 @@
+# Day 1
+
 Problem: Given a number N, check whether it is a even number or odd number.
 
 Test Cases:
@@ -63,6 +65,8 @@ Questions:
 4. To check whether a number is a perfect number or not
 5. To check whether a number is a armstrong number or not
 6. To check whether a number is a fibonacci number or not
+
+# Day 2
 
 ## 2. Prime Number
 
@@ -182,3 +186,19 @@ Output: Palindrome
 
 Input: 123
 Output: Not Palindrome
+
+# Day 3
+
+Time Complexity
+
+### Topics
+
+- Problem Solving
+- Time Complexity
+- Arrays & Strings
+- Sorting & Searching Algorithms
+- Recursion
+- Pattern Programming
+- Data Structures
+  - Linked List
+  - Stacks and Queues
