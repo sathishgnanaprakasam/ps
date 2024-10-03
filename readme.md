@@ -202,3 +202,14 @@ Time Complexity
 - Data Structures
   - Linked List
   - Stacks and Queues
+
+### Sorting Algorithms
+
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+
+### Searching Algorithms
+
+- Linear Search
+- Binary Search
