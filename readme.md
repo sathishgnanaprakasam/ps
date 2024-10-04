@@ -213,3 +213,11 @@ Time Complexity
 
 - Linear Search
 - Binary Search
+
+Homework Problems:
+
+1.⁠ ⁠Optimize bubble sort by adding a flag to stop the algorithm if the array is already sorted before completing all iterations. Apply this on the array: [3, 2, 1, 4, 5].
+
+2.⁠ ⁠⁠Modify the linear search algorithm to return all indices where a target element occurs in an array.
+
+3.⁠ ⁠⁠You are given an array where each element is either 0 or 1, but the array is sorted (all 0s come before all 1s). Write an efficient function to count the number of 1s in the array. What is the time complexity of your solution?
