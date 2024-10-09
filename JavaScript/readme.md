@@ -666,28 +666,164 @@ document.querySelector(".class tag");
 - In functional components, we use useEffect hook to perform the side effects.
 
 7. Class components vs Functional components.
+
+class component:
+
+- It is a JavaScript class that extends the React.Component class.
+- It has a render method that returns the JSX [JavaScript XML].
+- Class components are called as stateful components.
+- They have lifecycle methods.
+  - componentDidMount
+  - componentDidUpdate
+  - componentWillUnmount
+- constructor:
+  - It is used to initialize the state of the component.
+  - It is used to bind the event handlers.
+  - It is used to initialize the props.
+- super keyword:
+  - It is used to call the constructor of the parent class.
+  - this keyword:
+    - It points to the current instance of the class.
+
+functional component:
+
+- It is a JavaScript function that returns the JSX [JavaScript XML].
+- Functional components are called as stateless components.
+  - As the functional components does not have a state, we use hooks to manage the state in functional components.
+  - We can either use useState or useReducer hooks or Redux to manage the state in functional components.
+- Functional components does not have lifecycle methods.
+  - We use useEffect hook to perform the side effects in functional components.
+
 8. redux
+
+- Redux is a state management library.
+- It is used to manage the state of the application.
+- It is used to store the data of the application.
+- It is used to share the data among the components.
+- It is used to maintain the state of the application.
+- Redux is developed by Dan Abramov, Andrew Clark, and others, from Facebook.
+
 9. hooks - useState, useEffect, useContext, useReducer, useRef, useMemo, useCallback, useLayoutEffect
-10. useEffect and limitations.
+10. useEffect.
+
+- useEffect is a hook that is used to perform the side effects in functional components.
+- It is used to perform the operations like data fetching, DOM manipulation, etc.
+
 11. fetch and axios
+
+fetch:
+
+- fetch is a built-in function in JavaScript that is used to make the network requests(HTTP requests).
+- It is used to fetch the data from the server
+- we need to parse the response data using the json() method.
+- the headers are not set by default.
+
+axios:
+
+- axios is a third-party library that is used to make the network requests(HTTP requests).
+- It is used to fetch the data from the server.
+- It is used to make the network requests in an easy way.
+- we do not need to parse the response data using the json() method.
+- the headers are set by default.
+
 12. lifecycle methods - class components
+
+- componentDidMount: It is called after the component is mounted to the DOM. It is used to perform the side effects like data fetching, DOM manipulation, etc.
+- componentDidUpdate: It is called after the component is updated. It is used to perform the side effects like data fetching, DOM manipulation, etc.
+- componentWillUnmount: It is called before the component is unmounted from the DOM. It is used to perform the cleanup operations like removing the event listeners, etc.
+
 13. Babel
+
+- Babel is a JavaScript compiler.
+- It is used to convert the modern JavaScript code into the old JavaScript code.
+- It is used to convert the ES6 code into the ES5 code.
+- It is used to convert the JSX code into the JavaScript code.
+
 14. error boundary
-15. optimization techniques in React
+
+- Error boundary is a component that is used to catch the errors in the application.
+- It is used to catch the errors that are thrown by the child components.
+- It is used to display the error message to the user.
+- It is used to prevent the application from crashing.
+
+15. Optimization techniques in React
+
+- Code splitting: It is a technique where we split the code into multiple chunks and load only the required code.
+- Lazy loading: It is a technique where we load the components only when they are required.
+- Memoization: It is a technique where we cache the results of the function calls. (useMemo, useCallback)
+
+  - it will be used when there are too many re-renders or expensive calculations or when the function is called multiple times.
+  - we use useMemo in these cases to cache the results and avoid the re-renders.
+
+- Virtualization: It is a technique where we render only the visible part of the list.
 
 # NodeJS Interview Questions:
 
 1. Explain about streams and buffers in NodeJS?
+
+Buffers: Buffers are used to store the binary data in NodeJS. They are used to store the raw data in NodeJS. They are used to store the data in the form of bytes. They are used to store the data in the form of chunks.
+
+Streams: Streams are used to read and write the data in NodeJS. They are used to read the data from the source and write the data to the destination. They are used to read the data in chunks. They are used to read the data in the form of streams.
+
+They are useful when we are working with large files or when we are working with the network requests.
+
 2. What is a middleware in NodeJS?
+
+- Middleware is a function that has access to the request object, response object, and the next middleware function in the application's request-response cycle.
+- It is used to perform the operations like data parsing, logging, authentication, authorization, etc.
+
 3. What is a fork in NodeJS?
+
+- Fork is a method that is used to create a new child process in NodeJS.
+- It is used to create a new child process that runs the same code as the parent process.
+
+```javascript
+const { fork } = require("child_process");
+
+const child = fork("child.js");
+
+child.on("message", (message) => {
+  console.log(message);
+});
+
+child.send("Hello from parent process!");
+```
+
+```javascript
+// child.js
+process.on("message", (message) => {
+  console.log(message);
+  process.send("Hello from child process!");
+});
+```
+
 4. What is a single thread in NodeJS?
+
+- NodeJS is a single-threaded runtime environment.
+- It is used to execute the JavaScript code in a single thread.
+- It is used to execute the JavaScript code in a non-blocking way.
+- It is used to execute the JavaScript code in an asynchronous way.
+
 5. filesystem in NodeJS
+
+- Filesystem is a module in NodeJS that is used to perform the file operations.
+- It is used to read the file, write the file, update the file, delete the file, etc.
 
 # Databases - MySQL & MongoDB Interview Questions:
 
 1. Aggregate in mongodb
+
 2. populate in mongodb
 3. joining data in mongodb
 4. DDL & DML in mysql
 5. table creation in mysql
 6. CRUD operations in mysql
+7. Joins in mysql: are used to combine rows from two or more tables based on a related column between them.
+
+Types of Joins:
+
+- Inner join: It returns the rows when there is a match in both tables.
+- Outer join
+  - Left outer join: It returns all the rows from the left table and the matched rows from the right table.
+  - Right outer join: It returns all the rows from the right table and the matched rows from the left table.
+  - Full outer join: It returns all the rows when there is a match in one of the tables. It is a combination of left outer join and right outer join.
